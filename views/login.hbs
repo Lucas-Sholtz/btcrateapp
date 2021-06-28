@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    {{> menu}}
+    <h1>Login</h1>
+    <form action="/user/login" method="post">
+        <label>Email</label><br>
+        <input type="email" name="userEmail" required/><br><br>
+        <label>Password</label><br>
+        <input type="password" name="userPassword" id="password" required/><br><br>
+        <input type="submit" value="Login" />
+    </form>
+</body>
+</html>

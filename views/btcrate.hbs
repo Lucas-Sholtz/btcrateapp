@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BtcRate</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <input type="button" value="Logout" onclick="logout()">
+    <h1>UAH-BTC</h1>
+    Time: {{time}}
+    <br>
+    Rate: {{btcRate}} UAH
+    <script type="text/javascript">
+	window.onbeforeunload = deleteCookie();
+        function deleteCookie() {
+            document.cookie = "token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+            document.cookie = "email= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+	function logout() {
+	    deleteCookie();
+	    location.href="/user/login";
+            return false;
+	}
+    </script>
+</body>
+</html>
